@@ -7,3 +7,5 @@ int countCharacters(const char* str);
 void countVowelsAndConsonants(const char* str);
 void reverseString(char* str);
 int countW(const char* str);
+void vigenereEncrypt(const char* plaintext, const char* keyword, char* result);
+void vigenereDecrypt(const char* ciphertext, const char* keyword, char* result);
