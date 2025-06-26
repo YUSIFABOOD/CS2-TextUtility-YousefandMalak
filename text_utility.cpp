@@ -37,7 +37,7 @@ int substringoccur (const char* s,const char* f)
    }
    return countSub;
 }
-<<<<<<< HEAD
+
 void countVowelsAndConsonants(const char* str) {
    int  countV = 0;
     int countC = 0;
@@ -102,7 +102,7 @@ void reverseString(char* arr) {
         right--;
 }
 }
-=======
+
 void vigenereEncrypt(const char* plaintext, const char* keyword, char* result) {
     int keyLen = 0;
     while (keyword[keyLen] != '\0') ++keyLen;
