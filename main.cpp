@@ -39,11 +39,11 @@ int main () {
     cout<<str3<<endl;
 
     cout<<endl<<"Counting the words in (Life is beautiful)."<<endl;
-    int count2 = countW("Life is beautiful.");
+    int count2 = countW("Life is beautiful");
     cout<<"Number of words: "<<count2<<endl;
 
     cout<<endl<<"Counting the characters in (Life is beautiful):"<<endl;
 
-    int count3 = countCharacters("Life is beautiful.");
+    int count3 = CharactersCounter("Life is beautiful");
     cout<<"Number of characters: "<<count3<<endl;
 }

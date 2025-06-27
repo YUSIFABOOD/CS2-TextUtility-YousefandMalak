@@ -66,10 +66,19 @@ while (str[count] != '\0'){
 count++;
 
 }
-
-
 return count;
 }
+
+int CharactersCounter(const char* str)
+{
+int count=0;
+for(int i=0; str[i]!='\0'; i++)
+    {if(str[i]==' ') continue;
+    else count++;}
+return count;
+}
+
+
 
 int countW(const char* str)
 {
