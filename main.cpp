@@ -46,4 +46,10 @@ int main () {
 
     int count3 = CharactersCounter("Life is beautiful");
     cout<<"Number of characters: "<<count3<<endl;
+char str4[] = "life is beautiful";
+    cout<<endl<<"Encrypting the phrase "<<"("<<str4<<")"<<endl;
+    vigenereEncrypt(str4, "lemon");
+    cout<<"After encryption: "<<str4<<endl;
+    vigenereDecrypt(str4, "lemon");
+    cout<<"After decryption: "<<str4<<endl;
 }
