@@ -116,16 +116,12 @@ void vigenereEncrypt(char* txt, const char* keyword)
     int keyLength = countCharacters(keyword);
     for(int i=0; txt[i]!='\0';i++)
     {
+        Lowercase(txt);
         int j=i%keyLength;
         if(txt[i]>='a'&&txt[i]<='z')
         {
             txt[i]=((txt[i]-'a'+keyword[j]-'a')%26)+'a';
         }
-        else if(txt[i]>='A'&&txt[i]<='Z')
-        {
-            txt[i]=((txt[i]-'A'+keyword[j]-'A')%26)+'A';
-        }
-
     }
 }
 
@@ -134,15 +130,11 @@ void vigenereDecrypt(char* txt, const char* keyword)
     int keyLength = countCharacters(keyword);
     for(int i=0; txt[i]!='\0';i++)
     {
+        Lowercase(txt);
         int j=i%keyLength;
         if(txt[i]>='a'&&txt[i]<='z')
         {
             txt[i]=(((txt[i]-'a'-keyword[j]+'a')+26)%26)+'a';
         }
-        else if(txt[i]>='A'&&txt[i]<='Z')
-        {
-            txt[i]=(((txt[i]-'A'-keyword[j]+'A')+26)%26)+'A';
-        }
-
     }
 }
