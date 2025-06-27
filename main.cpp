@@ -3,39 +3,47 @@
 using namespace std;
 
 int main () {
+    cout<<"Is the word (hello) a palindrome?"<<endl;
+
     if(isPalindrom("hello")) cout<<"It is a palindrome."<<endl;
     else cout<<"It is not a palindrome."<<endl;
+
+    cout<<endl<<"Is the word (helloolleh) a palindrome?"<<endl;
 
     if(isPalindrom("helloolleh")) cout<<"It is a palindrome."<<endl;
     else cout<<"It is not a palindrome."<<endl;
 
-    char str [1000] = "goOd MorniNG";
+    cout<<endl<<"Changing all characters of (goOd MorniNG) to uppercase"<<endl;
+    char str [] = "goOd MorniNG";
     Uppercase(str);
     cout <<str<<endl;
 
-    char str2 [1000] = "goOd MorniNG";
+    cout<<endl<<"Changing all characters of (goOd MorniNG) to lowercase"<<endl;
+    char str2 [] = "goOd MorniNG";
     Lowercase(str2);
     cout <<str2<<endl;
 
+    cout<<endl<<"Counting the occurence of the substring (AU) in (AUCgoAUCnoAUCyes AUC)."<<endl;
+
     int count = substringoccur("AUCgoAUCnoAUCyes AUC", "AU");
-    cout<<count<<endl;
+    cout<<"Number of occurence: "<<count<<endl;
+
+    cout<<endl<<"Counting the vowels and the consonants in (Fundamentals of computing): "<<endl;
 
     countVowelsAndConsonants("Fundamentals of computing");
 
-    char str3 [1000] = "Malak";
+    cout<<endl<<"Testing reverse string func on (Malak):"<<endl;
+
+    char str3 [] = "Malak";
     reverseString(str3);
     cout<<str3<<endl;
 
-    int count2 = countW("You're gonna carry that weight.");
-    cout<<count2<<endl;
+    cout<<endl<<"Counting the words in (Life is beautiful)."<<endl;
+    int count2 = countW("Life is beautiful");
+    cout<<"Number of words: "<<count2<<endl;
 
-    int count3 = countCharacters("You're gonna carry that weight.");
-    cout<<count3<<endl;
+    cout<<endl<<"Counting the characters in (Life is beautiful):"<<endl;
 
-char str4[] = "life is beautiful";
-    cout<<endl<<"Encrypting the phrase "<<"("<<str4<<")"<<endl;
-    vigenereEncrypt(str4, "lemon");
-    cout<<"After encryption: "<<str4<<endl;
-    vigenereDecrypt(str4, "lemon");
-    cout<<"After decryption: "<<str4<<endl;
+    int count3 = CharactersCounter("Life is beautiful");
+    cout<<"Number of characters: "<<count3<<endl;
 }
