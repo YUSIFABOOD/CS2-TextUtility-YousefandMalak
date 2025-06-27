@@ -3,47 +3,39 @@
 using namespace std;
 
 int main () {
-    cout<<"Is the word (hello) a palindrome?"<<endl;
-
     if(isPalindrom("hello")) cout<<"It is a palindrome."<<endl;
     else cout<<"It is not a palindrome."<<endl;
-
-    cout<<endl<<"Is the word (helloolleh) a palindrome?"<<endl;
 
     if(isPalindrom("helloolleh")) cout<<"It is a palindrome."<<endl;
     else cout<<"It is not a palindrome."<<endl;
 
-    cout<<endl<<"Changing all characters of (goOd MorniNG) to uppercase"<<endl;
-    char str [] = "goOd MorniNG";
+    char str [1000] = "goOd MorniNG";
     Uppercase(str);
     cout <<str<<endl;
 
-    cout<<endl<<"Changing all characters of (goOd MorniNG) to lowercase"<<endl;
-    char str2 [] = "goOd MorniNG";
+    char str2 [1000] = "goOd MorniNG";
     Lowercase(str2);
     cout <<str2<<endl;
 
-    cout<<endl<<"Counting the occurence of the substring (AU) in (AUCgoAUCnoAUCyes AUC)."<<endl;
-
     int count = substringoccur("AUCgoAUCnoAUCyes AUC", "AU");
-    cout<<"Number of occurence: "<<count<<endl;
-
-    cout<<endl<<"Counting the vowels and the consonants in (Fundamentals of computing): "<<endl;
+    cout<<count<<endl;
 
     countVowelsAndConsonants("Fundamentals of computing");
 
-    cout<<endl<<"Testing reverse string func on (Malak):"<<endl;
-
-    char str3 [] = "Malak";
+    char str3 [1000] = "Malak";
     reverseString(str3);
     cout<<str3<<endl;
 
-    cout<<endl<<"Counting the words in (Life is beautiful)."<<endl;
-    int count2 = countW("Life is beautiful");
-    cout<<"Number of words: "<<count2<<endl;
+    int count2 = countW("You're gonna carry that weight.");
+    cout<<count2<<endl;
 
-    cout<<endl<<"Counting the characters in (Life is beautiful):"<<endl;
+    int count3 = countCharacters("You're gonna carry that weight.");
+    cout<<count3<<endl;
 
-    int count3 = CharactersCounter("Life is beautiful");
-    cout<<"Number of characters: "<<count3<<endl;
+char str4[] = "life is beautiful";
+    cout<<endl<<"Encrypting the phrase "<<"("<<str4<<")"<<endl;
+    vigenereEncrypt(str4, "lemon");
+    cout<<"After encryption: "<<str4<<endl;
+    vigenereDecrypt(str4, "lemon");
+    cout<<"After decryption: "<<str4<<endl;
 }
