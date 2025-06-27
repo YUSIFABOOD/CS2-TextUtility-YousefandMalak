@@ -1,0 +1,3 @@
+/home/yusif/CS2 assignment/testing/CMakeFiles/text.dir
+/home/yusif/CS2 assignment/testing/CMakeFiles/edit_cache.dir
+/home/yusif/CS2 assignment/testing/CMakeFiles/rebuild_cache.dir

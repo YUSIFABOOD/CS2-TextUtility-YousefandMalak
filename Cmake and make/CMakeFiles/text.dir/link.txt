@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/text.dir/link.d CMakeFiles/text.dir/text_utility.cpp.o CMakeFiles/text.dir/main.cpp.o -o text
