@@ -99,72 +99,7 @@ void reverseString(char* arr) {
         arr[left] = arr[left] - arr[right];
 
         left++;
-        right--;
+        right--;
 }
 }
 
-void vigenereEncrypt(const char* plaintext, const char* keyword, char* result) {
-    int keyLen = 0;
-    while (keyword[keyLen] != '\0') ++keyLen;
-    int keyIndex = 0;
-    int i = 0;
-    char p;
-    while ((p = plaintext[i]) != '\0') {
-        if (p >= 'a' && p <= 'z') {
-            int pVal = p - 'a';
-            char k = keyword[keyIndex % keyLen];
-            int kVal;
-            if (k >= 'a' && k <= 'z') kVal = k - 'a';
-            else if (k >= 'A' && k <= 'Z') kVal = k - 'A';
-            else kVal = 0;
-            result[i] = char((pVal + kVal) % 26 + 'a');
-            ++keyIndex;
-        } else if (p >= 'A' && p <= 'Z') {
-            int pVal = p - 'A';
-            char k = keyword[keyIndex % keyLen];
-            int kVal;
-            if (k >= 'a' && k <= 'z') kVal = k - 'a';
-            else if (k >= 'A' && k <= 'Z') kVal = k - 'A';
-            else kVal = 0;
-            result[i] = char((pVal + kVal) % 26 + 'A');
-            ++keyIndex;
-        } else {
-            result[i] = p;
-        }
-        ++i;
-    }
-    result[i] = '\0';
-}
-
-void vigenereDecrypt(const char* ciphertext, const char* keyword, char* result) {
-    int keyLen = 0;
-    while (keyword[keyLen] != '\0') ++keyLen;
-    int keyIndex = 0;
-    int i = 0;
-    char c;
-    while ((c = ciphertext[i]) != '\0') {
-        if (c >= 'a' && c <= 'z') {
-            int cVal = c - 'a';
-            char k = keyword[keyIndex % keyLen];
-            int kVal;
-            if (k >= 'a' && k <= 'z') kVal = k - 'a';
-            else if (k >= 'A' && k <= 'Z') kVal = k - 'A';
-            else kVal = 0;
-            result[i] = char((cVal - kVal + 26) % 26 + 'a');
-            ++keyIndex;
-        } else if (c >= 'A' && c <= 'Z') {
-            int cVal = c - 'A';
-            char k = keyword[keyIndex % keyLen];
-            int kVal;
-            if (k >= 'a' && k <= 'z') kVal = k - 'a';
-            else if (k >= 'A' && k <= 'Z') kVal = k - 'A';
-            else kVal = 0;
-            result[i] = char((cVal - kVal + 26) % 26 + 'A');
-            ++keyIndex;
-        } else {
-            result[i] = c;
-        }
-        ++i;
-    }
-    result[i] = '\0';
-}
